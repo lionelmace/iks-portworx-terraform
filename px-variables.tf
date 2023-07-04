@@ -13,6 +13,7 @@
 variable "px_cluster_name" {
   description = "Name of existing portworx cluster"
   type        = string
+  default     = "" # LMA
   # nullable    = false
 }
 # variable "resource_group" {
