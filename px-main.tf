@@ -1,6 +1,7 @@
 module "portworx_enterprise" {
   # IBM Provider Configuration
-  source           = "../../"
+  #LMA source           = "../../"
+  source = "portworx/terraform-ibm-portworx-enterprise"
   region           = var.region
   ibmcloud_api_key = var.ibmcloud_api_key
 
