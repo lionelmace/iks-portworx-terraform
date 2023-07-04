@@ -1,14 +1,14 @@
-data "ibm_iam_api_key" "api_key" {
-  apikey_id = "ApiKey-903cb05c-999e-4f87-b0eb-682394e42200"
-}
+# data "ibm_iam_api_key" "api_key" {
+#   apikey_id = "ApiKey-903cb05c-999e-4f87-b0eb-682394e42200"
+# }
 
 module "portworx_enterprise" {
   # IBM Provider Configuration
   #LMA source           = "../../"
   source = "github.com/portworx/terraform-ibm-portworx-enterprise"
   region           = var.region
-  # LMA ibmcloud_api_key = var.ibmcloud_api_key
-  ibmcloud_api_key = data.ibm_iam_api_key.api_key
+  ibmcloud_api_key = var.ibmcloud_api_key
+  #LMA ibmcloud_api_key = data.ibm_iam_api_key.api_key
 
   # IKS Cluster Configuration
   #LMA cluster_name   = var.iks_cluster_name

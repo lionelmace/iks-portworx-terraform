@@ -22,12 +22,13 @@ variable "px_cluster_name" {
 #   nullable    = false
 # }
 
-# variable "ibmcloud_api_key" {
-#   description = "Get the ibmcloud api key from https://cloud.ibm.com/iam/apikeys"
-#   type        = string
-#   sensitive   = true
-#   nullable    = false
-# }
+variable "ibmcloud_api_key" {
+  description = "Get the ibmcloud api key from https://cloud.ibm.com/iam/apikeys"
+  type        = string
+  sensitive   = true
+  # nullable    = false
+}
+
 variable "use_cloud_drives" {
   type        = bool
   description = "Use Cloud Drives, `true` or `false`"
