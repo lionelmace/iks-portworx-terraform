@@ -16,7 +16,7 @@ module "portworx_enterprise" {
   #LMA px_cluster_name   = var.px_cluster_name
   px_cluster_name   = ibm_container_vpc_cluster.iks_cluster.id
   #LMA resource_group = var.resource_group
-  resource_group = ibm_resource_group.group.id
+  resource_group = ibm_resource_group.group.name
   classic_infra  = var.classic_infra
 
   # External ETCD Configuration
