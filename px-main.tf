@@ -12,9 +12,9 @@ module "portworx_enterprise" {
 
   # IKS Cluster Configuration
   #LMA cluster_name   = var.iks_cluster_name
-  cluster_name = ibm_container_vpc_cluster.iks_cluster.id
+  cluster_name = ibm_container_vpc_cluster.iks_cluster.name
   #LMA px_cluster_name   = var.px_cluster_name
-  px_cluster_name   = ibm_container_vpc_cluster.iks_cluster.id
+  px_cluster_name   = ibm_container_vpc_cluster.iks_cluster.name
   #LMA resource_group = var.resource_group
   resource_group = ibm_resource_group.group.name
   classic_infra  = var.classic_infra
