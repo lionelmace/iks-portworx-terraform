@@ -10,12 +10,14 @@
 #   type        = string
 #   nullable    = false
 # }
+
 variable "px_cluster_name" {
   description = "Name of existing portworx cluster"
   type        = string
   default     = "" # LMA
   # nullable    = false
 }
+
 # variable "resource_group" {
 #   description = "Resource group of existing IKS Cluster "
 #   type        = string
@@ -26,6 +28,7 @@ variable "ibmcloud_api_key" {
   description = "Get the ibmcloud api key from https://cloud.ibm.com/iam/apikeys"
   type        = string
   sensitive   = true
+  default     = ""
   # nullable    = false
 }
 
