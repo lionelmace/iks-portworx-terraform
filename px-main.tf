@@ -5,10 +5,12 @@ module "portworx_enterprise" {
   ibmcloud_api_key = var.ibmcloud_api_key
 
   # IKS Cluster Configuration
-  cluster_name   = var.iks_cluster_name
-  # px_cluster_name   = var.px_cluster_name
-  px_cluster_name   = var.iks_cluster_name
-  resource_group = var.resource_group
+  #LMA cluster_name   = var.iks_cluster_name
+  cluster_name = ibm_container_vpc_cluster.iks_cluster.id
+  #LMA px_cluster_name   = var.px_cluster_name
+  px_cluster_name   = ibm_container_vpc_cluster.iks_cluster.id
+  #LMA resource_group = var.resource_group
+  resource_group = ibm_resource_group.group.id
   classic_infra  = var.classic_infra
 
   # External ETCD Configuration
