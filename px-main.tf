@@ -1,9 +1,13 @@
+data "ibm_iam_api_key" "api_key" {
+}
+
 module "portworx_enterprise" {
   # IBM Provider Configuration
   #LMA source           = "../../"
   source = "github.com/portworx/terraform-ibm-portworx-enterprise"
   region           = var.region
-  ibmcloud_api_key = var.ibmcloud_api_key
+  # LMA ibmcloud_api_key = var.ibmcloud_api_key
+  ibmcloud_api_key = data.ibm_iam_api_key.api_key.id
 
   # IKS Cluster Configuration
   #LMA cluster_name   = var.iks_cluster_name
