@@ -1,5 +1,5 @@
 data "ibm_iam_api_key" "api_key" {
-  apikey_id = "id"
+  apikey_id = "ApiKey-903cb05c-999e-4f87-b0eb-682394e42200"
 }
 
 module "portworx_enterprise" {
